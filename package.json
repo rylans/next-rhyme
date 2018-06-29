@@ -4,7 +4,7 @@
   "description": "Provides the next rhyming word given the previous words",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/rylans/next-rhyme#readme",
   "dependencies": {
     "datamuse": "^1.0.5"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
