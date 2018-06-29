@@ -10,17 +10,23 @@
 
     next(lastWordThisLine, (nextJson) => {
       rhyme(lastWordPrevLine, (rhymeJson) => {
+	let allRhymes = [];
 	let nextRhymes = [];
 
-	for (i = 0; i < nextJson.length; i++) {
-	  for (j = 0; j < rhymeJson.length; j++) {
+	for (j = 0; j < rhymeJson.length; j++) {
+	  allRhymes.push(rhymeJson[j].word);
+	  for (i = 0; i < nextJson.length; i++) {
 	    if (rhymeJson[j].word === nextJson[i].word) {
 	      nextRhymes.push(nextJson[i].word);
 	    }
 	  }
 	}
 
-	callback(nextRhymes);
+	if (nextRhymes.length < 1) {
+	  callback(allRhymes);
+	} else {
+	  callback(nextRhymes);
+	}
       });
     });
   }
