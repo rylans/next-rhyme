@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/rylans/next-ryhme.git"
   },
-  "author": "",
+  "author": "Rylans",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rylans/next-ryhme/issues"
   },
-  "homepage": "https://github.com/rylans/next-ryhme#readme"
+  "homepage": "https://github.com/rylans/next-ryhme#readme",
+  "dependencies": {
+    "datamuse": "^1.0.5"
+  }
 }
